@@ -140,8 +140,20 @@ entity_unit_map = {
 }
 ```
 
+**Approach**
+
+Data Collection and Preprocessing:
+•	Gathered a dataset of product images containing the desired entities (weight, volume, voltage, etc.).
+•	Preprocess images by resizing, normalizing, and augmenting them to improve model robustness.
+OCR for Text Extraction:
+•	Use libraries like Tesseract OCR EasyOCR to extract text from images.
+•	Preprocess extracted text to identify entity values, applying techniques such as regex for numbers and units (e.g., "kg," "W," "V").
+Entity Recognition & Parsing:
+•	Develop a post-processing step where extracted text is parsed to identify key entities (weight, volume, etc.). Use named entity recognition (NER) models or custom rules to detect patterns in the text (e.g., numbers followed by units).
+•	Validate the extracted entities against predefined constraints (e.g., weight values in grams or kilograms).
+
 
 Team Members  
-**Pabitra Kumar Bera**
-**Tushar Kumar**
-**Krishna**
+**Pabitra Kumar Bera   ** 
+**Tushar Kumar         **
+**Krishna              **
